@@ -1,0 +1,3 @@
+[submodule "sweden-zipcode"]
+	path = sweden-zipcode
+	url = git@github.com:zegl/sweden-zipcode.git
