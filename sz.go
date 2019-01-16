@@ -5,6 +5,8 @@ import (
 	"io"
 	"log"
 	"os"
+	"path"
+	"runtime"
 	"strconv"
 )
 
@@ -56,7 +58,14 @@ func Valid(in interface{}) bool {
 }
 
 func parseCSV() map[string]string {
-	file, err := os.Open("./sweden-zipcode/sweden-zipcode.csv")
+	_, filename, _, ok := runtime.Caller(1)
+	if !ok {
+		log.Fatal("could not read file path")
+	}
+
+	filepath := path.Join(path.Dir(filename), "sweden-zipcode/sweden-zipcode.csv")
+
+	file, err := os.Open(filepath)
 	if err != nil {
 		log.Fatal(err)
 	}
