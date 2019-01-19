@@ -39,7 +39,7 @@ func NewZipCodes(httpFallback bool) *ZipCodes {
 		log.Fatal("could not read file path")
 	}
 
-	filepath := path.Join(path.Dir(filename), "sweden-zipcode/sweden-zipcode.csv")
+	filepath := path.Join(path.Dir(filename), "sweden-zipcode.csv")
 
 	z := &ZipCodes{
 		clientURL: "https://change.me.se",
