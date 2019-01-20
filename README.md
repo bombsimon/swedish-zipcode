@@ -13,7 +13,7 @@ to an [HTTPS API from Bring](https://developer.bring.com/api/postal-code/).
 If you call `Store()` on the `ZipCodes` type you can store all newly found zip
 codes in the existing CSV file for faster and offline execution in the future.
 
-## Notest
+## Multiple results
 
 A few zip codes are listed as multiple matches which means they're shared
 between multiple locations. Instead of choosing one of them none is chosen so
